@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+	<div style="font-size:18px" id="howLongDiv"></div>
+	<script type="text/javascript">
+	var audio = new Audio('https://www.soundjay.com/button/beep-07.mp3');
+	playMe = function() {
+		audio.play();
+		time = Math.round(Math.random()*180);
+		document.getElementById("howLongDiv").innerText = '' + time;
+		setTimeout(playMe, time * 1000);
+	};
+
+	playMe();
+	</script>
+</body>
